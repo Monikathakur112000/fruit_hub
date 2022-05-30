@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.fruithub.fragment.deliverydetails.DeliveryDetailsViewModel" />
+    </data>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            tools:context=".fragment.deliverydetails.DeliveryDetailsFragment">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/crossCardView"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardCornerRadius="@dimen/_100sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_17sdp"
+                    android:layout_height="@dimen/_17sdp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/cross" />
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/detailTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/ttnorms_regular"
+                android:text="@string/delivery_address"
+                android:textColor="@color/paua"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/crossCardView" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/detailEditText"
+                style="@style/EditTextStyle"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:backgroundTint="@color/white_smoke_200"
+                android:fontFamily="@font/ttnorms_regular"
+                android:hint="@string/hintDetail"
+                android:inputType="textPostalAddress"
+                android:padding="@dimen/_16sdp"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detailTextView" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/numberTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:fontFamily="@font/ttnorms_regular"
+                android:text="@string/phone_number"
+                android:textColor="@color/paua"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detailEditText" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/numberEditText"
+                style="@style/EditTextStyle"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:fontFamily="@font/ttnorms_regular"
+                android:hint="@string/numberHint"
+                android:inputType="number"
+                android:padding="@dimen/_16sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/numberTextView" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/payOnDeliveryButton"
+                style="@style/ButtonStyle"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:text="@string/payOnDelivery"
+                android:textColor="@color/orange_100"
+                app:backgroundTint="@color/lumber"
+                app:layout_constraintEnd_toStartOf="@+id/payWithCardButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/payWithCardButton" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/payWithCardButton"
+                style="@style/ButtonStyle"
+                android:layout_marginTop="@dimen/_31sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:text="@string/payWithCard"
+                android:textColor="@color/orange_100"
+                app:backgroundTint="@color/lumber"
+                app:cornerRadius="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/payOnDeliveryButton"
+                app:layout_constraintTop_toBottomOf="@+id/numberEditText" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

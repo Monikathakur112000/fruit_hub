@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragment.authentication.AuthenticationFragment">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.fruithub.fragment.authentication.AuthenticationViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/sunshade"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/authenticationImageView"
+                    style="@style/ImageViewStyle"
+                    android:layout_width="@dimen/_290sdp"
+                    android:layout_height="@dimen/_250sdp"
+                    android:layout_marginStart="@dimen/_27sdp"
+                    android:layout_marginTop="@dimen/_75sdp"
+                    android:layout_marginEnd="@dimen/_27sdp"
+                    android:layout_marginBottom="@dimen/_30sdp"
+                    android:background="@color/sunshade"
+                    android:src="@drawable/authentication_screen_image"
+                    app:layout_constraintBottom_toBottomOf="@id/constraint"
+                    app:layout_constraintEnd_toEndOf="@id/constraint"
+                    app:layout_constraintStart_toStartOf="@id/constraint"
+                    app:layout_constraintTop_toTopOf="@id/constraint" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/authenticationTextView"
+                style="@style/TextViewStyle"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/ttnorms_bold"
+                android:text="@string/firstname"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/constraint" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/authenticationEditText"
+                style="@style/EditTextStyle"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_30sdp"
+                android:hint="@string/username"
+                android:padding="@dimen/_8sdp"
+                app:layout_constraintBottom_toTopOf="@id/authenticationScreenButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/authenticationTextView" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/authenticationScreenButton"
+                style="@style/ButtonStyle"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_50sdp"
+                android:text="@string/startOrdering"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/authenticationEditText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

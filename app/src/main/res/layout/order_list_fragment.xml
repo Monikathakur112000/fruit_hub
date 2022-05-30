@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragment.orderlist.OrderListFragment">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.fruithub.fragment.orderlist.OrderListViewModel" />
+    </data>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/parentConstraint"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_110sdp"
+                android:background="@color/orange"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/goBackCardView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="@dimen/_100sdp"
+                    app:layout_constraintStart_toStartOf="@id/constraint"
+                    app:layout_constraintTop_toTopOf="@id/constraint">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="34dp"
+                        android:padding="@dimen/_6sdp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/backImageView"
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/_4sdp"
+                            android:src="@drawable/ic_arrow_back"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/goBackTextView"
+                            app:layout_constraintHorizontal_chainStyle="packed"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/goBackTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="@dimen/_4sdp"
+                            android:fontFamily="@font/ttnorms_regular"
+                            android:text="@string/goBack"
+                            android:textColor="@color/paua"
+                            android:textSize="@dimen/_10ssp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/backImageView"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/basketTextView"
+                    style="@style/TextViewStyle"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:text="@string/delivery_status"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_18ssp"
+                    app:layout_constraintBottom_toBottomOf="@+id/goBackCardView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/goBackCardView"
+                    app:layout_constraintTop_toTopOf="@+id/goBackCardView" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/orderTakenCardView"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:layout_marginBottom="@dimen/_39sdp"
+                android:background="@drawable/btn_clicked"
+                android:backgroundTint="@color/floral_white"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraint">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/orderTakenImageView"
+                    style="@style/ImageViewStyle"
+                    android:layout_width="@dimen/_39sdp"
+                    android:layout_height="@dimen/_44sdp"
+                    android:src="@drawable/order_taken_image"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/orderTakenTextView"
+                style="@style/TextViewStyle"
+                android:layout_width="0dp"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:text="@string/order_taken"
+                app:layout_constraintBottom_toBottomOf="@+id/orderTakenCardView"
+                app:layout_constraintEnd_toStartOf="@+id/doneImageView"
+                app:layout_constraintStart_toEndOf="@+id/orderTakenCardView"
+                app:layout_constraintTop_toTopOf="@id/orderTakenCardView" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/doneImageView"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_18sdp"
+                android:src="@drawable/ic_baseline_check_circle"
+                app:layout_constraintBottom_toBottomOf="@+id/orderTakenTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/orderTakenTextView" />
+
+
+            <View
+                android:id="@+id/line_view"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/_21sdp"
+                android:background="@drawable/vertical_dotted_line"
+                android:layerType="software"
+                app:layout_constraintBottom_toTopOf="@id/orderListCardView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/orderTakenCardView" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/orderProcessCardView"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_49sdp"
+                android:layout_marginBottom="@dimen/_39sdp"
+                android:background="@drawable/btn_clicked"
+                android:backgroundTint="@color/blue_magenta_100"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/orderTakenCardView">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/orderProcessImageView"
+                    android:layout_width="@dimen/_48sdp"
+                    android:layout_height="@dimen/_44sdp"
+                    android:src="@drawable/order_process_image"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/orderProcessTextView"
+                style="@style/TextViewStyle"
+                android:layout_width="0dp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:text="@string/order_process"
+                app:layout_constraintBottom_toBottomOf="@+id/orderProcessCardView"
+                app:layout_constraintEnd_toStartOf="@+id/orderProcessDoneImageView"
+                app:layout_constraintStart_toEndOf="@id/orderProcessCardView"
+                app:layout_constraintTop_toTopOf="@id/orderProcessCardView" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/orderProcessDoneImageView"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_18sdp"
+                android:src="@drawable/ic_baseline_check_circle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/orderProcessTextView" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/orderDeliveryCardView"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_44sdp"
+                android:layout_marginBottom="@dimen/_39sdp"
+                android:background="@drawable/btn_clicked"
+                android:backgroundTint="@color/white_smoke_100"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/orderProcessCardView">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/orderDeliveryImageView"
+                    android:layout_width="@dimen/_48sdp"
+                    android:layout_height="@dimen/_44sdp"
+
+                    android:src="@drawable/order_delivery_image"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/orderDeliveryTextView"
+                style="@style/TextViewStyle"
+                android:layout_width="0dp"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:text="@string/order_delivery"
+                app:layout_constraintEnd_toStartOf="@+id/orderDeliveryDoneImageView"
+                app:layout_constraintStart_toEndOf="@id/orderDeliveryCardView"
+                app:layout_constraintTop_toTopOf="@id/orderDeliveryCardView" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/deliveryTextView"
+                style="@style/TextViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:text="@string/meal"
+                android:textColor="@color/gray_100"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@+id/orderDeliveryTextView"
+                app:layout_constraintStart_toStartOf="@+id/orderDeliveryTextView"
+                app:layout_constraintTop_toBottomOf="@id/orderDeliveryTextView" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/orderDeliveryDoneImageView"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_18sdp"
+                app:cardBackgroundColor="@color/orange"
+                app:cardCornerRadius="@dimen/_100sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/deliveryTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/orderDeliveryTextView">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_phone_in_talk" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/trackOrderImageView"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_135sdp"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_18sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/google_map"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/orderDeliveryCardView"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/orderListCardView"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_47sdp"
+                android:layout_marginBottom="@dimen/_39sdp"
+                android:background="@drawable/btn_clicked"
+                android:backgroundTint="@color/foam"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/trackOrderImageView">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/orderReceiveImageView"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:src="@drawable/ic_baseline_check_circle"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/orderReceiveTextView"
+                style="@style/TextViewStyle"
+                android:layout_width="0dp"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:text="@string/order_received"
+                app:layout_constraintBottom_toBottomOf="@+id/orderListCardView"
+                app:layout_constraintEnd_toStartOf="@+id/doneReceiveImageView"
+                app:layout_constraintStart_toEndOf="@+id/orderListCardView"
+                app:layout_constraintTop_toTopOf="@id/orderListCardView" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/doneReceiveImageView"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_18sdp"
+                android:src="@drawable/ic_baseline_more_horiz"
+                app:layout_constraintBottom_toBottomOf="@+id/orderListCardView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/orderListCardView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>
+

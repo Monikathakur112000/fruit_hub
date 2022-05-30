@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/welcomeScreenFragment"
+        android:name="com.example.fruithub.fragment.welcome.WelcomeFragment"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeScreenFragment_to_authenticationScreenFragment"
+            app:destination="@id/authenticationScreenFragment" />
+        <action
+            android:id="@+id/action_welcomeScreenFragment_to_splashScreenFragment"
+            app:destination="@id/splashScreenFragment"
+
+             />
+    </fragment>
+    <fragment
+        android:id="@+id/authenticationScreenFragment"
+        android:name="com.example.fruithub.fragment.authentication.AuthenticationFragment"
+        tools:layout="@layout/fragment_authentication" >
+        <action
+            android:id="@+id/action_authenticationScreenFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.example.fruithub.fragment.splash.SplashFragment"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashScreenFragment_to_welcomeScreenFragment"
+            app:destination="@id/welcomeScreenFragment"
+            app:popUpTo="@id/splashScreenFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeScreenFragment"
+        android:name="com.example.fruithub.fragment.home.HomeFragment"
+        android:label="fragment_home_screen"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeScreenFragment_to_addToBasketFragment"
+            app:destination="@id/addToBasketFragment" />
+        <action
+            android:id="@+id/action_homeScreenFragment_to_myBasket"
+            app:destination="@id/myBasket" />
+        <action
+            android:id="@+id/action_homeScreenFragment_to_orderListFragment"
+            app:destination="@id/orderListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addToBasketFragment"
+        android:name="com.example.fruithub.fragment.addtobasket.AddToBasketFragment"
+        android:label="fragment_add_to_basket"
+        tools:layout="@layout/fragment_add_to_basket" >
+        <action
+            android:id="@+id/action_addToBasketFragment_to_myBasket"
+            app:destination="@id/myBasket" />
+        <action
+            android:id="@+id/action_addToBasketFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment"
+            app:popUpTo="@id/homeScreenFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/myBasket"
+        android:name="com.example.fruithub.fragment.mybasket.MyBasketFragment"
+        android:label="fragment_my_basket"
+        tools:layout="@layout/fragment_my_basket" >
+        <action
+            android:id="@+id/action_addCardFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment"
+            app:popUpTo="@id/homeScreenFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_addCardFragment_to_deliveryDetailsFragment"
+            app:destination="@id/deliveryDetailsFragment"
+            app:popUpTo="@id/deliveryDetailsFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_deliveryDetailsFragment_to_myBasket"
+            app:destination="@id/myBasket"
+            app:popUpTo="@id/myBasket"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_addCardFragment_to_orderCompleteFragment"
+            app:destination="@id/orderCompleteFragment" />
+        <action
+            android:id="@+id/action_deliveryDetailsFragment_to_orderCompleteFragment"
+            app:destination="@id/orderCompleteFragment" />
+        <action
+            android:id="@+id/action_myBasket_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment"
+            app:popUpTo="@id/homeScreenFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_myBasket_to_deliveryDetailsFragment"
+            app:destination="@id/deliveryDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/deliveryDetailsFragment"
+        android:name="com.example.fruithub.fragment.deliverydetails.DeliveryDetailsFragment"
+        android:label="delivery_details_fragment"
+        tools:layout="@layout/delivery_details_fragment" >
+        <action
+            android:id="@+id/action_deliveryDetailsFragment_to_addCardFragment"
+            app:destination="@id/addCardFragment" />
+        <action
+            android:id="@+id/action_deliveryDetailsFragment_to_orderCompleteFragment"
+            app:destination="@id/orderCompleteFragment" />
+        <action
+            android:id="@+id/action_deliveryDetailsFragment_to_myBasket"
+            app:destination="@id/myBasket"
+            app:popUpTo="@id/myBasket"
+            app:popUpToInclusive="true" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/addCardFragment"
+        android:name="com.example.fruithub.fragment.addcard.AddCardFragment"
+        android:label="add_card_fragment"
+        tools:layout="@layout/add_card_fragment" >
+        <action
+            android:id="@+id/action_addCardFragment_to_orderCompleteFragment"
+            app:destination="@id/orderCompleteFragment" />
+        <action
+            android:id="@+id/action_addCardFragment_to_deliveryDetailsFragment"
+            app:destination="@id/deliveryDetailsFragment"
+            app:popUpTo="@id/deliveryDetailsFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_addCardFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment"
+            app:popUpTo="@id/homeScreenFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderCompleteFragment"
+        android:name="com.example.fruithub.fragment.ordercomplete.OrderCompleteFragment"
+        android:label="order_complete_fragment"
+        tools:layout="@layout/order_complete_fragment" >
+        <action
+            android:id="@+id/action_orderCompleteFragment_to_orderListFragment"
+            app:destination="@id/orderListFragment" />
+        <action
+            android:id="@+id/action_orderCompleteFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment"
+            app:popUpTo="@id/homeScreenFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderListFragment"
+        android:name="com.example.fruithub.fragment.orderlist.OrderListFragment"
+        android:label="order_list_fragment"
+        tools:layout="@layout/order_list_fragment" >
+        <action
+            android:id="@+id/action_orderListFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment"
+            app:popUpTo="@id/homeScreenFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

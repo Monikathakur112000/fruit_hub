@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/btn_clicked.xml" value="0.1295" />
+        <entry key="app/src/main/res/drawable/btn_design_normal.xml" value="0.124" />
+        <entry key="app/src/main/res/drawable/circle.xml" value="0.1295" />
+        <entry key="app/src/main/res/drawable/dotted_line.xml" value="0.1295" />
+        <entry key="app/src/main/res/drawable/ic_baseline_check_circle.xml" value="0.1295" />
+        <entry key="app/src/main/res/drawable/ic_baseline_phone_in_talk.xml" value="0.1295" />
+        <entry key="app/src/main/res/drawable/ic_baseline_remove.xml" value="0.1295" />
+        <entry key="app/src/main/res/drawable/ripple.xml" value="0.124" />
+        <entry key="app/src/main/res/drawable/ripple_bg.xml" value="0.1295" />
+        <entry key="app/src/main/res/drawable/shape_background_cardview.xml" value="0.1295" />
+        <entry key="app/src/main/res/drawable/shape_rectangle.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/vertical_dotted_line.xml" value="0.1295" />
+        <entry key="app/src/main/res/layout-v31/home_screen_tab_item_view.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.6666666666666666" />
+        <entry key="app/src/main/res/layout/add_card_fragment.xml" value="1.0" />
+        <entry key="app/src/main/res/layout/delivery_details_fragment.xml" value="0.6666666666666666" />
+        <entry key="app/src/main/res/layout/fragment_add_to_basket.xml" value="0.6416666666666667" />
+        <entry key="app/src/main/res/layout/fragment_authentication.xml" value="0.6666666666666666" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/fragment_my_basket.xml" value="0.9" />
+        <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.6666666666666666" />
+        <entry key="app/src/main/res/layout/fragment_welcome.xml" value="0.6666666666666666" />
+        <entry key="app/src/main/res/layout/home_screen_item_view.xml" value="0.14814814814814814" />
+        <entry key="app/src/main/res/layout/home_screen_recommend_item_view.xml" value="0.75" />
+        <entry key="app/src/main/res/layout/home_screen_tab_item_view.xml" value="1.5" />
+        <entry key="app/src/main/res/layout/list_item_view_add_basket.xml" value="0.75" />
+        <entry key="app/src/main/res/layout/my_basket_recyclerview.xml" value="1.1" />
+        <entry key="app/src/main/res/layout/order_complete_fragment.xml" value="0.1734375" />
+        <entry key="app/src/main/res/layout/order_list_fragment.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/tab_item_view.xml" value="1.1" />
+        <entry key="app/src/main/res/layout/tab_layout.xml" value="0.14814814814814814" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

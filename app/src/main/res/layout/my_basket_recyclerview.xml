@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:padding="@dimen/_10sdp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/myBasketCardView"
+            android:layout_width="@dimen/_65sdp"
+            android:layout_height="@dimen/_60sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/imageViewConstraint"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/basketImageView"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/myBasketTextView"
+            style="@style/TextViewStyle"
+            android:layout_width="0dp"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintEnd_toStartOf="@+id/constraintLayout"
+            app:layout_constraintStart_toEndOf="@id/myBasketCardView"
+            app:layout_constraintTop_toTopOf="@+id/myBasketCardView"
+            tools:text="textView" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/packTextView"
+            style="@style/TextViewStyle"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:fontFamily="@font/ttnorms_light"
+            android:text="@string/two_packs"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/myBasketTextView"
+            app:layout_constraintTop_toBottomOf="@id/myBasketTextView" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/currencyView"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_13sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:src="@drawable/currency_vector_image"
+            app:layout_constraintBottom_toBottomOf="@+id/myBasketCardView"
+            app:layout_constraintStart_toStartOf="@+id/packTextView"
+            app:layout_constraintTop_toBottomOf="@id/packTextView"
+            app:tint="@color/black" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/amountTextView"
+            style="@style/TextViewStyle"
+            android:layout_marginStart="@dimen/_3sdp"
+            android:fontFamily="@font/ttnorms_medium"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintBottom_toBottomOf="@id/currencyView"
+            app:layout_constraintStart_toEndOf="@id/currencyView"
+            app:layout_constraintTop_toTopOf="@id/currencyView" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:background="@drawable/circle"
+            android:backgroundTint="@color/linen"
+            app:layout_constraintBottom_toBottomOf="@+id/myBasketCardView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/myBasketCardView">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/removeItemButton"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="0dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_baseline_remove" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

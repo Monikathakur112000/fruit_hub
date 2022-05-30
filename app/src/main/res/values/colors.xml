@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="off_white">#F7F5F5</color>
+    <color name="sunshade">#FFA451</color>
+    <color name="orange">#FFA451</color>
+    <color name="grey">#5D577E</color>
+    <color name="linen">#FFF2E7</color>
+    <color name="light_gray">#C2BDBD</color>
+    <color name="deep_dove">#070648</color>
+    <color name="white_smoke">#F5F5F5</color>
+    <color name="paua">#27214D</color>
+    <color name="serenade">#FFF2E7</color>
+    <color name="blue_magenta">#5D577E</color>
+    <color name="blue_magenta_100">#F1EFF6</color>
+    <color name="lumber">#FFE3C9</color>
+    <color name="dark_charcoal">#333333</color>
+    <color name="light_grey">#FAFAFA</color>
+    <color name="gray">#E5E5E5</color>
+    <color name="floral_white">#FFFAEB</color>
+    <color name="white_smoke_100">#FEF0F0</color>
+    <color name="gray_100">#CC333333</color>
+    <color name="foam">#F0FEF8</color>
+    <color name="white_smoke_200">#F7F5F5</color>
+    <color name="seashell">#FCF6F0</color>
+    <color name="orange_100">#F08626</color>
+    <color name="dark_gray">#111111</color>
+    <color name="black_lacque">#403E3E</color>
+    <color name="dark_gray_shade">#333333</color>
+    <color name="ghost_white">#F7F7FC</color>
+    <color name="rhino">#253F66</color>
+    <string name="colors">
+    <item name="card_color1">#FFFCF2</item>
+    <item name="card_color2">#FEF4F4</item>
+    <item name="card_color3">#F1EFF6</item>
+    </string>
+</resources>

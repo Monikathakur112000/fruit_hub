@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragment.addtobasket.AddToBasketFragment">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.fruithub.fragment.addtobasket.AddToBasketViewModel" />
+    </data>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/orange">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/orange"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/goBackCardView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_28sdp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="@dimen/_100sdp"
+                    app:layout_constraintStart_toStartOf="@id/constraint"
+                    app:layout_constraintTop_toTopOf="@id/constraint">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_6sdp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/backImageView"
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/_4sdp"
+                            android:src="@drawable/ic_arrow_back"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/goBackTextView"
+                            app:layout_constraintHorizontal_chainStyle="packed"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/goBackTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="@dimen/_4sdp"
+                            android:fontFamily="@font/ttnorms_regular"
+                            android:text="@string/goBack"
+                            android:textColor="#27214D"
+                            android:textSize="@dimen/_10ssp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/backImageView"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/addToBasketImageView"
+                    style="@style/ImageViewStyle"
+                    android:layout_width="@dimen/_176sdp"
+                    android:layout_height="@dimen/_176sdp"
+                    android:layout_marginStart="@dimen/_27sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_27sdp"
+                    android:layout_marginBottom="@dimen/_30sdp"
+                    android:src="@drawable/quinoa_fruit_salad"
+                    android:tooltipText="@drawable/quinoa_fruit_salad"
+                    app:layout_constraintBottom_toBottomOf="@id/constraint"
+                    app:layout_constraintEnd_toEndOf="@id/constraint"
+                    app:layout_constraintStart_toStartOf="@id/constraint"
+                    app:layout_constraintTop_toBottomOf="@+id/goBackCardView" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_bg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/constraint">
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/addBasketTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/ttnorms_medium"
+                    android:maxLines="1"
+                    android:text="@string/quinoaFruitSalad"
+                    android:textColor="#27214D"
+                    android:textSize="@dimen/_21ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/removeButtonCardView"
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardBackgroundColor="#FFF2E7"
+                    app:cardCornerRadius="@dimen/_100sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/addBasketTextView">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/removeItemButton"
+                        android:layout_width="@dimen/_16sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_baseline_remove" />
+                </androidx.cardview.widget.CardView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/itemNumberTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_29sdp"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/ttnorms_regular"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/_1"
+                    android:textColor="#27214D"
+                    android:textSize="@dimen/_24ssp"
+                    app:layout_constraintBottom_toBottomOf="@id/removeButtonCardView"
+                    app:layout_constraintEnd_toStartOf="@id/addButtonCardView"
+                    app:layout_constraintStart_toEndOf="@id/removeButtonCardView"
+                    app:layout_constraintTop_toTopOf="@id/removeButtonCardView" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/addButtonCardView"
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardBackgroundColor="#FFF2E7"
+                    app:cardCornerRadius="@dimen/_100sdp"
+                    app:layout_constraintBottom_toBottomOf="@id/itemNumberTextView"
+                    app:layout_constraintStart_toEndOf="@id/itemNumberTextView"
+                    app:layout_constraintTop_toBottomOf="@+id/addBasketTextView"
+                    app:layout_constraintTop_toTopOf="@id/itemNumberTextView">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/addBasketImageButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_add_button" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/addBasketCurrencyView"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:src="@drawable/currency_vector_image"
+                    app:layout_constraintEnd_toStartOf="@id/addBasketAmountTextView"
+                    app:layout_constraintTop_toBottomOf="@+id/addBasketTextView"
+                    app:tint="@color/black" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/addBasketAmountTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_29sdp"
+                    android:layout_marginEnd="@dimen/_18sdp"
+                    android:fontFamily="@font/ttnorms_medium"
+                    android:maxLines="1"
+                    android:text="@string/comboAmount"
+                    android:textColor="#27214D"
+                    android:textSize="@dimen/_20ssp"
+                    app:layout_constraintBottom_toBottomOf="@id/addBasketCurrencyView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/addBasketCurrencyView" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/addBasketLineImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_29sdp"
+                    android:layout_marginEnd="@dimen/_18sdp"
+                    android:src="@drawable/line_image_add_basket"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/removeButtonCardView" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/comboTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:fontFamily="@font/ttnorms_regular"
+                    android:text="@string/comboContains"
+                    android:textColor="#27214D"
+                    android:textSize="@dimen/_18ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/addBasketLineImageView" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/topLineImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:src="@drawable/line_image"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/comboTextView" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/addToBasketRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/comboTextView"
+                    tools:listitem="@layout/list_item_view_add_basket" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/basketLineImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_11sdp"
+                    android:layout_marginEnd="@dimen/_18sdp"
+                    android:src="@drawable/line_image_add_basket"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/addToBasketRecyclerView" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/addToBasketTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_11sdp"
+                    android:layout_marginEnd="@dimen/_18sdp"
+                    android:fontFamily="@font/ttnorms_light"
+                    android:text="@string/detailCombo"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/basketLineImageView"
+
+                    />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/favCardView"
+                    android:layout_width="@dimen/_48sdp"
+                    android:layout_height="@dimen/_48sdp"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardBackgroundColor="#FFF7F0"
+                    app:cardCornerRadius="@dimen/_100sdp"
+                    app:layout_constraintBottom_toBottomOf="@id/addBasketButton"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/addBasketButton">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/favImageView"
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_22sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_baseline_favorite" />
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/addBasketButton"
+                    style="@style/ButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_48sdp"
+                    android:layout_marginStart="@dimen/_40sdp"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:layout_marginEnd="@dimen/_18sdp"
+                    android:layout_marginBottom="@dimen/_12sdp"
+                    android:fontFamily="@font/ttnorms_medium"
+                    android:text="@string/addToBasket"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/favCardView"
+                    app:layout_constraintTop_toBottomOf="@id/addToBasketTextView" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

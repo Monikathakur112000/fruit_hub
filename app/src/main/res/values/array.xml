@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="recommend">
+        <item>All</item>
+        <item>Salad Combo</item>
+        <item>Berry Combo</item>
+        <item>Mango Combo</item>
+    </string-array>
+
+    <string-array name="combo">
+        <item>Red Quinoa</item>
+        <item>Lime</item>
+        <item>Honey</item>
+        <item>Blueberries</item>
+        <item>Mango</item>
+        <item>Strawberries</item>
+        <item>Fresh Mint</item>
+    </string-array>
+
+</resources>
