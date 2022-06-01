@@ -20,7 +20,6 @@ class HomeTabAdapter(
 
     private lateinit var binding: HomeScreenTabItemViewBinding
 
-
     class HomeTabViewHolder(binding: HomeScreenTabItemViewBinding) :
         RecyclerView.ViewHolder(binding.root) {
         val imageView = binding.saladImageView
@@ -38,7 +37,7 @@ class HomeTabAdapter(
 
     override fun onBindViewHolder(holder: HomeTabViewHolder, position: Int) {
         val item = dataset[position]
-         val rnd = Random
+        val rnd = Random
         val currentColor = Color.argb(20, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256))
         holder.cardViewBg.setBackgroundColor(currentColor)
 

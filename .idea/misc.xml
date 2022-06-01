@@ -17,22 +17,22 @@
         <entry key="app/src/main/res/drawable/vertical_dotted_line.xml" value="0.1295" />
         <entry key="app/src/main/res/layout-v31/home_screen_tab_item_view.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.6666666666666666" />
-        <entry key="app/src/main/res/layout/add_card_fragment.xml" value="1.0" />
-        <entry key="app/src/main/res/layout/delivery_details_fragment.xml" value="0.6666666666666666" />
+        <entry key="app/src/main/res/layout/add_card_fragment.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/delivery_details_fragment.xml" value="1.0" />
         <entry key="app/src/main/res/layout/fragment_add_to_basket.xml" value="0.6416666666666667" />
-        <entry key="app/src/main/res/layout/fragment_authentication.xml" value="0.6666666666666666" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/fragment_my_basket.xml" value="0.9" />
+        <entry key="app/src/main/res/layout/fragment_authentication.xml" value="0.20307017543859648" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_my_basket.xml" value="0.5" />
         <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.6666666666666666" />
-        <entry key="app/src/main/res/layout/fragment_welcome.xml" value="0.6666666666666666" />
-        <entry key="app/src/main/res/layout/home_screen_item_view.xml" value="0.14814814814814814" />
-        <entry key="app/src/main/res/layout/home_screen_recommend_item_view.xml" value="0.75" />
-        <entry key="app/src/main/res/layout/home_screen_tab_item_view.xml" value="1.5" />
-        <entry key="app/src/main/res/layout/list_item_view_add_basket.xml" value="0.75" />
-        <entry key="app/src/main/res/layout/my_basket_recyclerview.xml" value="1.1" />
-        <entry key="app/src/main/res/layout/order_complete_fragment.xml" value="0.1734375" />
+        <entry key="app/src/main/res/layout/fragment_welcome.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/home_screen_item_view.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/home_screen_recommend_item_view.xml" value="1.1" />
+        <entry key="app/src/main/res/layout/home_screen_tab_item_view.xml" value="0.75" />
+        <entry key="app/src/main/res/layout/list_item_view_add_basket.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/my_basket_recyclerview.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/order_complete_fragment.xml" value="0.22" />
         <entry key="app/src/main/res/layout/order_list_fragment.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/tab_item_view.xml" value="1.1" />
+        <entry key="app/src/main/res/layout/tab_item_view.xml" value="0.22" />
         <entry key="app/src/main/res/layout/tab_layout.xml" value="0.14814814814814814" />
       </map>
     </option>

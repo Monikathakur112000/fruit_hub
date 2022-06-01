@@ -13,6 +13,9 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 class DeliveryDetailsFragment : BottomSheetDialogFragment() {
 
+    companion object {
+        const val FRAGMENT_TAG ="FRAGMENT_TAG"
+    }
 
     private val viewModel: DeliveryDetailsViewModel by viewModels()
     private lateinit var binding: DeliveryDetailsFragmentBinding
@@ -33,7 +36,11 @@ class DeliveryDetailsFragment : BottomSheetDialogFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         /*StatusBar Color Change*/
-        activity?.getColor(R.color.orange)?.let { activity?.window?.statusBarColor = it }
+        activity?.apply {
+            val color = getColor(R.color.sunshade)
+            window?.statusBarColor = color
+        }
+
         onClick()
     }
 
@@ -57,6 +64,5 @@ class DeliveryDetailsFragment : BottomSheetDialogFragment() {
         }
 
     }
-
 
 }

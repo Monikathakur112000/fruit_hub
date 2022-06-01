@@ -18,7 +18,6 @@ class AuthenticationFragment : Fragment() {
 
     private lateinit var binding: FragmentAuthenticationBinding
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -26,7 +25,7 @@ class AuthenticationFragment : Fragment() {
 
         /* Inflate the layout for this fragment*/
         binding = FragmentAuthenticationBinding.inflate(inflater, container, false)
-        binding.lifecycleOwner=viewLifecycleOwner
+        binding.lifecycleOwner = viewLifecycleOwner
         binding.viewModel = viewModel
         return binding.root
 
@@ -39,7 +38,6 @@ class AuthenticationFragment : Fragment() {
         activity?.getColor(R.color.sunshade)?.let { activity?.window?.statusBarColor = it }
         onClick()
     }
-
 
     private fun onClick() {
 

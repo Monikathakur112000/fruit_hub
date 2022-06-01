@@ -14,7 +14,6 @@ class HottestTab : Fragment() {
 
     private lateinit var binding: TabItemViewBinding
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
 

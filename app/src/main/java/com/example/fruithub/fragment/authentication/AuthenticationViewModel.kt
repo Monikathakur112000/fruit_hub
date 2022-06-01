@@ -12,4 +12,5 @@ class AuthenticationViewModel @Inject constructor(randomName: String, val app: M
     init {
         println("ViewModel:$randomName ${app.applicationContext}")
     }
+
 }

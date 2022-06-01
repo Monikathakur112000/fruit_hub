@@ -34,7 +34,7 @@
 
                     <ToggleButton
                         android:id="@+id/favouriteImageButton"
-                        style="@style/toggleButton"
+                        style="@style/toggleButtonStyle"
                         android:layout_width="@dimen/_20sdp"
                         android:layout_height="@dimen/_20sdp"
                         android:layout_marginTop="@dimen/_6sdp"
@@ -79,7 +79,7 @@
                         android:layout_width="0dp"
                         android:layout_marginStart="@dimen/_2sdp"
                         android:layout_marginEnd="@dimen/_12sdp"
-                        android:textColor="@color/orange"
+                        android:textColor="@color/sunshade"
                         app:layout_constraintBottom_toBottomOf="@id/currencyImageView"
                         app:layout_constraintEnd_toStartOf="@+id/cardView"
                         app:layout_constraintStart_toEndOf="@id/currencyImageView"

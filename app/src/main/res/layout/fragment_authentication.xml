@@ -60,9 +60,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/authenticationEditText"
                 style="@style/EditTextStyle"
-                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_8sdp"
-                android:layout_marginEnd="@dimen/_20sdp"
                 android:layout_marginBottom="@dimen/_30sdp"
                 android:hint="@string/username"
                 android:padding="@dimen/_8sdp"

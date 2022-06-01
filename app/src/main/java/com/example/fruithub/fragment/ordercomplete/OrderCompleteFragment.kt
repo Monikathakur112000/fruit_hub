@@ -15,7 +15,6 @@ import com.example.fruithub.databinding.OrderCompleteFragmentBinding
 
 class OrderCompleteFragment : Fragment() {
 
-
     private val viewModel: OrderCompleteViewModel by viewModels()
 
     private lateinit var binding: OrderCompleteFragmentBinding
@@ -57,15 +56,21 @@ class OrderCompleteFragment : Fragment() {
     /* Setting Animation*/
     private fun setAnimation() {
 
-        val animation = AnimationUtils.loadAnimation(context, R.anim.order_complete_anim)
+        val animation = AnimationUtils.loadAnimation(context, R.anim.fade_in_anim)
         binding.orderImageView.animation = animation
 
         animation.setAnimationListener(object : Animation.AnimationListener {
-            override fun onAnimationStart(animation: Animation) {}
+            override fun onAnimationStart(animation: Animation) {
 
-            override fun onAnimationRepeat(animation: Animation) {}
+            }
 
-            override fun onAnimationEnd(animation: Animation) {}
+            override fun onAnimationRepeat(animation: Animation) {
+
+            }
+
+            override fun onAnimationEnd(animation: Animation) {
+
+            }
 
 
         })

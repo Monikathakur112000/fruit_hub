@@ -1,11 +1,17 @@
 <resources>
     <string name="app_name">Fruit Hub</string>
+
+    <!--Welcome Screen Strings-->
     <string name="welcomeScreenText">"Get The Freshest Fruit Salad Combo "</string>
     <string name="welcomeText">We deliver best and freshest fruit salad in the town.Order for a combo today!!</string>
     <string name="letContinue">Let\'s Continue</string>
+
+    <!--Authentication Screen Strings-->
     <string name="firstname">What is your firstname?</string>
     <string name="startOrdering">Start Ordering</string>
     <string name="username">Chris</string>
+
+    <!--Home Screen String-->
     <string name="welcomeTextHomeScreen">Welcome, Chris.</string>
     <string name="searchFruitCombos">  Search for fruit salad combos</string>
     <string name="recommended">Recommended Combo</string>
@@ -20,44 +26,44 @@
     <string name="quinoaFruitSalad">Quinoa fruit salad</string>
     <string name="tropicalFruitSalad">Tropical fruit salad</string>
     <string name="melonFruitSalad">Melon fruit salad</string>
+
+    <!--Add To Basket Screen String-->
     <string name="addToBasket">Add To Basket</string>
     <string name="comboContains">This combo contains:</string>
     <string name="detailCombo">If you are looking for a new fruit salad to eat today, quinoa is the perfect brunch for you. make</string>
     <string name="goBack">Go back</string>
-    <string name="take_photo">Take Photo</string>
-    <string name="start_capture">Start Capture</string>
-    <string name="stop_capture">Stop Capture</string>
+    <string name="_1">1</string>
+
+    <!--My Basket String-->
     <string name="two_packs">2packs</string>
     <string name="total">Total</string>
     <string name="checkout">Checkout</string>
     <string name="my_basket">My Basket</string>
     <string name="total_amount">60,000</string>
-    <string name="_1">1</string>
+
+    <!--Delivery Detail String-->
     <string name="delivery_address">Your delivery address</string>
-
-
-    <string name="red_quinoa">Red Quinoa</string>
-    <string name="lime">Lime</string>
-    <string name="honey">Honey</string>
-    <string name="blueberries">Blueberries</string>
-    <string name="mango">Mango</string>
-    <string name="strawberries">Strawberries</string>
-    <string name="mint">Fresh Mint</string>
     <string name="phone_number">Number we can call</string>
     <string name="payOnDelivery">Pay on delivery</string>
     <string name="payWithCard">Pay with card</string>
     <string name="hintDetail">10th avenue, Lekki, Lagos</string>
     <string name="numberHint">09090909090</string>
+
+    <!--Add Card Details String-->
     <string name="card_holder_detail">Card holder’s name</string>
     <string name="card_number">Card number</string>
     <string name="date">Date</string>
     <string name="dateHint">MM/YY</string>
     <string name="cvv">CVV</string>
     <string name="complete_order">Complete order</string>
+
+    <!--Order Complete String-->
     <string name="order_taken">Order Taken</string>
     <string name="order_detail">Your order have been taken and is being attended to</string>
     <string name="continue_shopping">Continue shopping</string>
     <string name="track_order">Track order</string>
+
+    <!--Order List String-->
     <string name="delivery_status">Delivery Status</string>
     <string name="order_process">Order is being processed</string>
     <string name="order_delivery">Order is being delivered</string>

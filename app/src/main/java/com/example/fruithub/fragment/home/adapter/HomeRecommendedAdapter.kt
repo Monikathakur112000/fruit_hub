@@ -1,7 +1,6 @@
 package com.example.fruithub.fragment.home.adapter
 
 import android.content.Context
-import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.Navigation
@@ -15,7 +14,6 @@ class HomeRecommendedAdapter(
     private val context: Context,
     private val dataset: List<HomeFragmentDataClass>
 ) : RecyclerView.Adapter<HomeRecommendedAdapter.HomeRecommendedViewHolder>() {
-
 
     private lateinit var binding: HomeScreenRecommendItemViewBinding
 

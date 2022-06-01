@@ -13,11 +13,9 @@ import com.example.fruithub.databinding.OrderListFragmentBinding
 
 class OrderListFragment : Fragment() {
 
-
     private lateinit var binding: OrderListFragmentBinding
 
     private val viewModel: OrderListViewModel by viewModels()
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,19 +30,23 @@ class OrderListFragment : Fragment() {
 
     }
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         /*StatusBar Color Change*/
-        activity?.getColor(R.color.orange)?.let { activity?.window?.statusBarColor = it }
+        activity?.getColor(R.color.sunshade)?.let { activity?.window?.statusBarColor = it }
+
+        //
         onClick()
     }
 
+    /**
+     *
+     *
+     * */
+    private fun onClick() {
 
-    private fun onClick(){
-
-        /*Navigation From OrderList To HomeScreen*/
+        // Navigation From OrderList To HomeScreen
         binding.goBackCardView.setOnClickListener {
             findNavController().navigate(R.id.action_orderListFragment_to_homeScreenFragment)
         }

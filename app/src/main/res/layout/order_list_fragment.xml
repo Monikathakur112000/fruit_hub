@@ -27,7 +27,7 @@
                 android:id="@+id/constraint"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_110sdp"
-                android:background="@color/orange"
+                android:background="@color/sunshade"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -264,7 +264,7 @@
                 android:layout_width="@dimen/_30sdp"
                 android:layout_height="@dimen/_30sdp"
                 android:layout_marginEnd="@dimen/_18sdp"
-                app:cardBackgroundColor="@color/orange"
+                app:cardBackgroundColor="@color/sunshade"
                 app:cardCornerRadius="@dimen/_100sdp"
                 app:layout_constraintBottom_toBottomOf="@+id/deliveryTextView"
                 app:layout_constraintEnd_toEndOf="parent"

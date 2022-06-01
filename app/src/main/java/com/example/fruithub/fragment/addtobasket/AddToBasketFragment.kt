@@ -35,7 +35,7 @@ class AddToBasketFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         /* StatusBar Color Change*/
-        activity?.getColor(R.color.orange)?.let { activity?.window?.statusBarColor = it }
+        activity?.getColor(R.color.sunshade)?.let { activity?.window?.statusBarColor = it }
         binding.addToBasketRecyclerView.adapter = AddToBasketAdapter(context ?: return)
 
         /*Using FlexLayout To RecyclerView*/

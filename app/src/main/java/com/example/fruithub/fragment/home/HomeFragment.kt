@@ -11,6 +11,7 @@ import com.example.fruithub.R
 import com.example.fruithub.data.HomeFragmentDataClass
 import com.example.fruithub.databinding.FragmentHomeBinding
 import com.example.fruithub.fragment.home.adapter.HomeRecommendedAdapter
+import com.example.fruithub.fragment.home.adapter.HomeScreenAdapter
 import com.example.fruithub.fragment.home.viewpager.ViewPager
 import com.google.android.material.tabs.TabLayoutMediator
 

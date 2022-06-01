@@ -26,7 +26,7 @@ class SplashFragment : Fragment() {
 
         // Inflate the layout for this fragment
         binding = FragmentSplashBinding.inflate(inflater, container, false)
-        binding.lifecycleOwner=viewLifecycleOwner
+        binding.lifecycleOwner = viewLifecycleOwner
         binding.viewModel = viewModel
         return binding.root
     }
@@ -45,9 +45,12 @@ class SplashFragment : Fragment() {
         binding.splashImageView.animation = animation
 
         animation.setAnimationListener(object : Animation.AnimationListener {
-            override fun onAnimationStart(animation: Animation) {}
+            override fun onAnimationStart(animation: Animation) {
+            }
 
-            override fun onAnimationRepeat(animation: Animation) {}
+            override fun onAnimationRepeat(animation: Animation) {
+
+            }
 
             /*Navigating From Splash Screen To Welcome Screen*/
             override fun onAnimationEnd(animation: Animation) {

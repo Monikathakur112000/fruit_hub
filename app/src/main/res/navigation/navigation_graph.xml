@@ -14,10 +14,9 @@
             app:destination="@id/authenticationScreenFragment" />
         <action
             android:id="@+id/action_welcomeScreenFragment_to_splashScreenFragment"
-            app:destination="@id/splashScreenFragment"
-
-             />
+            app:destination="@id/splashScreenFragment"/>
     </fragment>
+
     <fragment
         android:id="@+id/authenticationScreenFragment"
         android:name="com.example.fruithub.fragment.authentication.AuthenticationFragment"

@@ -1,11 +1,10 @@
-package com.example.fruithub.fragment.home
+package com.example.fruithub.fragment.home.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fruithub.R
-import com.example.fruithub.databinding.FragmentAddToBasketBinding
 import com.example.fruithub.databinding.HomeScreenItemViewBinding
 
 class HomeScreenAdapter(context: Context) :

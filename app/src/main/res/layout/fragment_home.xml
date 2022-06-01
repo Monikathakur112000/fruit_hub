@@ -44,6 +44,8 @@
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/homeScreenWelcomeTextView"
                     style="@style/TextViewStyle"
+                    android:layout_width="0dp"
+                    android:layout_marginEnd="@dimen/_20sdp"
                     android:layout_marginStart="@dimen/_14sdp"
                     android:layout_marginTop="@dimen/_20sdp"
                     android:fontFamily="@font/ttnorms_regular"
@@ -51,6 +53,7 @@
                     android:textColor="@color/black"
                     android:textSize="@dimen/_14sdp"
                     app:layout_constraintBottom_toTopOf="@id/homeScreenSearchEditText"
+                    app:layout_constraintEnd_toStartOf="@+id/homeCardView"
                     app:layout_constraintStart_toEndOf="@id/homeScreenImageView"
                     app:layout_constraintTop_toTopOf="@id/nestedConstraint" />
 
@@ -84,10 +87,10 @@
                     android:layout_marginBottom="@dimen/_14sdp"
                     android:background="@drawable/btn_pressed"
                     android:drawableStart="@drawable/ic__search_image"
-                    android:drawablePadding="@dimen/_10sdp"
+                    android:drawablePadding="@dimen/_9sdp"
                     android:fontFamily="@font/ttnorms_regular"
                     android:hint="@string/searchFruitCombos"
-                    android:padding="@dimen/_10sdp"
+                    android:padding="@dimen/_8sdp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@id/filterCardView"
                     app:layout_constraintStart_toStartOf="parent"
@@ -96,7 +99,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/filterCardView"
                     android:layout_width="@dimen/_35sdp"
-                    android:layout_height="@dimen/_51sdp"
+                    android:layout_height="@dimen/_47sdp"
                     android:layout_marginStart="@dimen/_5sdp"
                     android:layout_marginEnd="@dimen/_9sdp"
                     android:clickable="true"
@@ -195,6 +198,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
+                android:scrollbars="none"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tabLayout">
 
@@ -205,8 +209,8 @@
                     android:layout_marginTop="@dimen/_8sdp"
                     android:layout_marginBottom="@dimen/_20sdp"
                     android:clipToPadding="false"
-                    android:paddingStart="@dimen/_8sdp"
-                    android:paddingEnd="@dimen/_8sdp"
+                    android:paddingStart="@dimen/_7sdp"
+                    android:paddingEnd="@dimen/_7sdp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

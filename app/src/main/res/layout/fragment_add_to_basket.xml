@@ -20,13 +20,13 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/orange">
+            android:background="@color/sunshade">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraint"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:background="@color/orange"
+                android:background="@color/sunshade"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">

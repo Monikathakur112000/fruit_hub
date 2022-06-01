@@ -19,14 +19,13 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/_10sdp"
+            android:padding="@dimen/_14sdp"
             tools:context=".fragment.deliverydetails.DeliveryDetailsFragment">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/crossCardView"
                 android:layout_width="@dimen/_40sdp"
                 android:layout_height="@dimen/_40sdp"
-                android:layout_marginEnd="@dimen/_8sdp"
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackground"
@@ -45,7 +44,6 @@
                 android:id="@+id/detailTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_8sdp"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:fontFamily="@font/ttnorms_regular"
                 android:text="@string/delivery_address"
@@ -57,10 +55,8 @@
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/detailEditText"
                 style="@style/EditTextStyle"
-                android:layout_marginStart="@dimen/_8sdp"
                 android:layout_marginTop="@dimen/_13sdp"
-                android:layout_marginEnd="@dimen/_8sdp"
-                android:backgroundTint="@color/white_smoke_200"
+                android:backgroundTint="@color/off_white"
                 android:fontFamily="@font/ttnorms_regular"
                 android:hint="@string/hintDetail"
                 android:inputType="textPostalAddress"
@@ -74,7 +70,6 @@
                 android:id="@+id/numberTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_8sdp"
                 android:layout_marginTop="@dimen/_12sdp"
                 android:fontFamily="@font/ttnorms_regular"
                 android:text="@string/phone_number"
@@ -86,9 +81,7 @@
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/numberEditText"
                 style="@style/EditTextStyle"
-                android:layout_marginStart="@dimen/_8sdp"
                 android:layout_marginTop="@dimen/_13sdp"
-                android:layout_marginEnd="@dimen/_8sdp"
                 android:fontFamily="@font/ttnorms_regular"
                 android:hint="@string/numberHint"
                 android:inputType="number"
@@ -97,28 +90,27 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/numberTextView" />
 
-            <com.google.android.material.button.MaterialButton
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/payOnDeliveryButton"
-                style="@style/ButtonStyle"
-                android:layout_marginStart="@dimen/_8sdp"
                 android:layout_marginEnd="@dimen/_16sdp"
                 android:text="@string/payOnDelivery"
-                android:textColor="@color/orange_100"
+                android:textColor="@color/orange"
                 app:backgroundTint="@color/lumber"
+                android:layout_marginBottom="@dimen/_10sdp"
+                style="@style/ButtonStyle"
                 app:layout_constraintEnd_toStartOf="@+id/payWithCardButton"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/payWithCardButton" />
+                app:layout_constraintTop_toTopOf="@+id/payWithCardButton"
+                app:layout_constraintBottom_toBottomOf="parent"/>
 
 
-            <com.google.android.material.button.MaterialButton
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/payWithCardButton"
-                style="@style/ButtonStyle"
                 android:layout_marginTop="@dimen/_31sdp"
-                android:layout_marginEnd="@dimen/_8sdp"
                 android:text="@string/payWithCard"
-                android:textColor="@color/orange_100"
+                android:textColor="@color/orange"
                 app:backgroundTint="@color/lumber"
-                app:cornerRadius="@dimen/_10sdp"
+                style="@style/ButtonStyle"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/payOnDeliveryButton"
                 app:layout_constraintTop_toBottomOf="@+id/numberEditText" />

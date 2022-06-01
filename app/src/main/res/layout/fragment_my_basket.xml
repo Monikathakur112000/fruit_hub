@@ -25,7 +25,7 @@
                 android:id="@+id/constraint"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_110sdp"
-                android:background="@color/orange"
+                android:background="@color/sunshade"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">

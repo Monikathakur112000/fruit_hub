@@ -20,7 +20,6 @@ class MyBasketFragment : Fragment() {
 
     private lateinit var binding: FragmentMyBasketBinding
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -37,7 +36,7 @@ class MyBasketFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         /*StatusBar Color Change*/
-        activity?.getColor(R.color.orange)?.let { activity?.window?.statusBarColor = it }
+        activity?.getColor(R.color.sunshade)?.let { activity?.window?.statusBarColor = it }
         binding.basketRecyclerView.adapter = MyBasketAdapter(context ?: return, tab())
         onClick()
     }
@@ -52,7 +51,7 @@ class MyBasketFragment : Fragment() {
         /*Navigation To DeliveryDetail BottomSheet*/
         binding.checkoutButton.setOnClickListener {
             val bottomSheetFragment: BottomSheetDialogFragment = DeliveryDetailsFragment()
-            bottomSheetFragment.show(childFragmentManager,"BottomSheet")
+            bottomSheetFragment.show(childFragmentManager, "BottomSheet")
 
         }
     }
